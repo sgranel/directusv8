@@ -38,6 +38,9 @@ Content-Type: application/json
 
 {"error":{"code":107,"message":"User with email \"test@yopmail.com\" not found"}}
 ```
+![User enumeration with burp](https://github.com/sgranel/directusv8/blob/main/user_enumeration_reset1.PNG)
+
+![User enumeration with the interface](https://github.com/sgranel/directusv8/blob/main/user_enumeration_reset2.PNG)
 
 This vulnerability is reported with the CVE ID : not yet
 
@@ -48,20 +51,32 @@ The attacker needs to be connected to see these information.
 
 According to the following screenshot, all technical information can easily retrieved. 
 
+![System information with Burp](https://github.com/sgranel/directusv8/blob/main/system_information.PNG)
+
 This vulnerability is reported with the CVE ID : CVE-2021-26595
 
 ## Privilege elevation
 This vulnerability aims to allow an attacker to elevation his privilege to administrator level. On directus plaform, according high privilege to an attack can be do by accessing to the mysite/users/ID using PATCH HTTP Method. On parameters, it is quite easy to guess that administrator role is associated to the ID 1.
 
+![Admin profile](https://github.com/sgranel/directusv8/blob/main/admin_profile.PNG)
+
 With a limited privilege account, it not possible to change role from interface : 
+
+![Limited right profile](https://github.com/sgranel/directusv8/blob/main/limited_right.png)
 
 According to the following screenshot, the PATCH request was sent with a standard user account and is sucessfully accepted by the server:
 
 Original request:
 
+![Original request](https://github.com/sgranel/directusv8/blob/main/original_request.PNG)
+
 Edited request by Burp Suite: 
 
+![Edited request](https://github.com/sgranel/directusv8/blob/main/edited_request.PNG)
+
 Response concerning the edited request:
+
+![Response](https://github.com/sgranel/directusv8/blob/main/response.PNG)
 
 This vulnerability is reported with the CVE ID : CVE-2021-26594
 
@@ -72,11 +87,19 @@ To secure an account, a user can use a two factor authentication. To log in, he 
 
 When a user enables the two-factor, he receives an QRCode to import this two factor in the specific application.
 
+![QR Code](https://github.com/sgranel/directusv8/blob/main/QRCode.png)
+
 It is possible to read this QRCode with QRCode Scanner (read with “Scanner QR” application on Android) :
+
+![QR Code readed](https://github.com/sgranel/directusv8/blob/main/QRCode_read.jpg)
 
 When an attacker, connected, can see all users and their 2FA secret : 
 
+![All 2 FA secrets](https://github.com/sgranel/directusv8/blob/main/2fa_secret_readable.PNG)
+
 According to the following screenshot, the server responds with full users’ data, especially 2fa_secret parameters.  From this secret information, an attacker can generate QrCode with free online website like : 
+
+![Generating new QR Code](https://github.com/sgranel/directusv8/blob/main/Generate_QRCode.PNG)
 
 This vulnerability is reported with the CVE ID : CVE-2021-26593
 
