@@ -42,7 +42,7 @@ Content-Type: application/json
 
 ![User enumeration with the interface](https://github.com/sgranel/directusv8/blob/main/user_enumeration_reset2.PNG)
 
-**This vulnerability is reported with the CVE ID : waiting a number**
+**This vulnerability is reported with the CVE ID : CVE-2021-27583**
 
 ## System information
 This vulnerability aims to allow to an attacker to get technical information about the server engine. From a simple API calling, the server responds with technical information like, directus version, PHP version and type of database.
