@@ -42,7 +42,7 @@ Content-Type: application/json
 
 ![User enumeration with the interface](https://github.com/sgranel/directusv8/blob/main/user_enumeration_reset2.PNG)
 
-**This vulnerability is reported with the CVE ID : CVE-2021-27583**
+**This vulnerability is reported with the CVE ID : ![CVE-2021-27583](https://nvd.nist.gov/vuln/detail/CVE-2021-27583)**
 
 ## System information
 This vulnerability aims to allow to an attacker to get technical information about the server engine. From a simple API calling, the server responds with technical information like, directus version, PHP version and type of database.
@@ -53,7 +53,7 @@ According to the following screenshot, all technical information can easily retr
 
 ![System information with Burp](https://github.com/sgranel/directusv8/blob/main/system_information.PNG)
 
-**This vulnerability is reported with the CVE ID : CVE-2021-26595**
+**This vulnerability is reported with the CVE ID : ![CVE-2021-26595](https://nvd.nist.gov/vuln/detail/CVE-2021-26595)**
 
 ## Privilege elevation
 This vulnerability aims to allow an attacker to elevation his privilege to administrator level. On directus plaform, according high privilege to an attack can be do by accessing to the mysite/users/ID using PATCH HTTP Method. On parameters, it is quite easy to guess that administrator role is associated to the ID 1.
@@ -78,7 +78,7 @@ Response concerning the edited request:
 
 ![Response](https://github.com/sgranel/directusv8/blob/main/response.PNG)
 
-**This vulnerability is reported with the CVE ID : CVE-2021-26594**
+**This vulnerability is reported with the CVE ID : ![CVE-2021-26594](https://nvd.nist.gov/vuln/detail/CVE-2021-26594)**
 
 ## Retrieve all two-factor authentications
 This vulnerability aims to allow to an attacker to retrieve sensitive information about users. On directus, two-factor authentication can be configured by using QrCode. 
@@ -101,7 +101,7 @@ According to the following screenshot, the server responds with full users’ da
 
 ![Generating new QR Code](https://github.com/sgranel/directusv8/blob/main/Generate_QRCode.PNG)
 
-**This vulnerability is reported with the CVE ID : CVE-2021-26593**
+**This vulnerability is reported with the CVE ID : ![CVE-2021-26593](https://nvd.nist.gov/vuln/detail/CVE-2021-26593)**
 
 
 **Authors** : Stanislas GRANEL, Arnaud COURTY
